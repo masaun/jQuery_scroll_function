@@ -35,7 +35,7 @@
   <p>hello!</p>
   <p>hello!</p>
   <p>hello!</p>
-  <div id="back-to-top" style="position: fixed; right: 5px; bottom: 5px;"><a href="#">↑</a></div>
+  <div id="back-to-top" style="position: fixed; right: 5px; bottom: 5px;"><a href="#"><img src="yajirushi"></a></div>
   <div id="pos" style="position: fixed; left: 5px; bottom: 5px;"></div>
   <script>
   $(function() {
@@ -52,7 +52,13 @@
         }
       });
 
-      // 
+      // #back-to-topがクリックされたら上に戻る
+      $('back-to-top a').click(function() {
+        $('body').animate({
+          scrollTop: 0
+        }, 500);
+        return false;
+      });
   });
   </script>
 </body>
